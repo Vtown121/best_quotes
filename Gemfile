@@ -1,2 +1,2 @@
 source 'https://rubygems.org'
-gem "rulers" # Your gem name
+gem "rulers", :path => "../rulers" # Your gem name
