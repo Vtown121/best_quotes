@@ -1,13 +1,15 @@
 PATH
   remote: ../rulers
   specs:
-    rulers (0.0.3)
+    rulers (0.0.4)
+      erubis
       rack (~> 2.2)
       webrick
 
 GEM
   remote: https://rubygems.org/
   specs:
+    erubis (2.7.0)
     rack (2.2.8)
     webrick (1.8.1)
 
