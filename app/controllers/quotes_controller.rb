@@ -2,7 +2,7 @@
 
 class QuotesController < Rulers::Controller
   def index
-    quotes = FileModel.all
+    quotes = Rulers::Model::FileModel.all
     render :index, :quotes => quotes
   end
 
@@ -23,5 +23,12 @@ class QuotesController < Rulers::Controller
     }
     m = FileModel.create attrs
     render :quote, :obj => m
+  end
+
+  def show  # change the last line
+    quote = FileModel.find(params["id"])
+    ua = request.user_agent
+    render_response :quote, :obj => quote,
+      :ua => ua 
   end
 end
